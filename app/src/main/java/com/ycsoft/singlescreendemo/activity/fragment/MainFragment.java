@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ycsoft.singlescreendemo.R;
-import com.ycsoft.singlescreendemo.activity.MvActivity;
+import com.ycsoft.singlescreendemo.activity.HotelActivity;
 import com.ycsoft.singlescreendemo.common.Constants;
 import com.ycsoft.singlescreendemo.util.DensityUtil;
 import com.ycsoft.singlescreendemo.util.ToolUtil;
@@ -217,8 +217,9 @@ public class MainFragment extends Fragment implements View.OnFocusChangeListener
 	@Override
 	public void onClick(View view) {
 		if (view == mTextViewArrays[0]) {
-			Intent intent = new Intent(getActivity(), MvActivity.class);
-			intent.putExtra(MvActivity.TAG, mTextViewArrays[0].getText().toString());
+
+			Intent intent = new Intent(getActivity(), HotelActivity.class);
+			intent.putExtra(HotelActivity.TAG, mTextViewArrays[0].getText().toString());
 			getActivity().startActivity(intent);
 		} else if (view == mTextViewArrays[1]) {
 			//打开电视家APP
