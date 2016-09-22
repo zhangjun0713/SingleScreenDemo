@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tv_page_hotel"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="我的酒店"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_hotel_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_page_hotel">
+
+        <TextView
+            android:id="@+id/tv_hotel_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_my_hotal"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="酒店介绍"
+            android:textColor="@android:color/white"
+            android:textSize="25sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hotel_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rl_hotel_1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/rl_hotel_1">
+
+        <TextView
+            android:id="@+id/tv_hotel_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_tv_live"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom|center_horizontal"
+            android:nextFocusRight="@+id/tv_hotel_3"
+            android:paddingBottom="10dp"
+            android:text="酒水点单"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hotel_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/rl_hotel_1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/rl_hotel_2">
+
+        <TextView
+            android:id="@+id/tv_hotel_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_movie"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="新闻"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hotel_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rl_hotel_1"
+        android:layout_alignLeft="@id/rl_hotel_3"
+        android:layout_toRightOf="@id/rl_hotel_2">
+
+        <TextView
+            android:id="@+id/tv_hotel_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_tv"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="消费记录"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hotel_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/rl_hotel_1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/rl_hotel_3">
+
+        <TextView
+            android:id="@+id/tv_hotel_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_k_song"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="天气"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hotel_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rl_hotel_1"
+        android:layout_alignLeft="@id/rl_hotel_4">
+
+        <TextView
+            android:id="@+id/tv_hotel_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_sport"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="多屏互动"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hotel_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/rl_hotel_1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/rl_hotel_4">
+
+        <TextView
+            android:id="@+id/tv_hotel_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_entertainment"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="主题"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hotel_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rl_hotel_1"
+        android:layout_alignLeft="@id/rl_hotel_5">
+
+        <TextView
+            android:id="@+id/tv_hotel_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_game"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="呼叫服务"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_white_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/rl_hotel_1"
+        android:layout_alignTop="@id/rl_hotel_1"
+        android:background="@drawable/white_border"
+        android:visibility="gone"/>
+
+</RelativeLayout>

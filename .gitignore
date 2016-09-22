@@ -1,0 +1,14 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+/build
+/gradlew.bat
+/settings.gradle
+/gradlew
+/gradle.properties
+/build.gradle
+/gradle
+/app/src/androidTest
+/app/src/test
+/app/build
