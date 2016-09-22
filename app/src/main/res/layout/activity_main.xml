@@ -28,7 +28,6 @@
             android:background="@drawable/ap_button_bg"
             android:enabled="true"
             android:focusable="true"
-            android:focusableInTouchMode="true"
             android:text="开启Wifi"
             android:textColor="@android:color/white"
             android:textSize="14sp"/>
