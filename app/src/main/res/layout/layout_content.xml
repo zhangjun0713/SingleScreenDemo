@@ -44,17 +44,6 @@
             android:src="@drawable/main_ycsoft_logo"/>
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv_page_name"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@id/rl_top"
-        android:layout_below="@id/rl_top"
-        android:layout_marginTop="15dp"
-        android:gravity="center_vertical"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"/>
-
     <FrameLayout
         android:id="@+id/fl_content"
         android:layout_width="match_parent"

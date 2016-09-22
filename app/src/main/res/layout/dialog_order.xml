@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="391dp"
+              android:layout_height="270dp"
+              android:background="@drawable/dialog_bg"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="鸡尾酒"
+        android:textColor="@color/text_color_pressed_seletor"
+        android:textSize="20sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6AAAAAA"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="44dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="数量"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/iv_count_reduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/icon_count_reduce_focused_selector"/>
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="80dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/count_tv_bg"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/iv_count_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/icon_count_add_focused_selector"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_7"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_0"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="18sp"/>
+
+        <ImageButton
+            android:id="@+id/ibtn_delete"
+            android:layout_width="86dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/number_focus_bg_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:src="@drawable/icon_delete"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#E6AAAAAA"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_negative"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_left_button_bg_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="20sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#E6AAAAAA"/>
+
+        <Button
+            android:id="@+id/btn_positive"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_right_button_bg_selector"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/text_color_pressed_seletor"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>

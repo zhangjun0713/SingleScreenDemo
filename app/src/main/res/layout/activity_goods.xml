@@ -4,17 +4,357 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/main_bg">
 
-    <include
-        android:id="@+id/includ_layout"
-        layout="@layout/layout_content"/>
+    <include layout="@layout/layout_content"/>
 
     <TextView
-        android:id="@+id/tv_page_name"
+        android:id="@+id/tv_page_goods"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"
-        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/icon_path_left_arrow"
+        android:layout_alignLeft="@+id/gv_content"
+        android:layout_marginTop="110dp"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text=" 酒水点单"
         android:textColor="@android:color/white"
         android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/gv_content"
+        android:layout_alignTop="@id/tv_page_goods"
+        android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:drawableLeft="@drawable/shopping_cart_selector"
+        android:paddingBottom="10dp"
+        android:text="购物车"
+        android:textColor="@color/text_color_pressed_seletor"
+        android:textSize="20sp"/>
+
+    <GridLayout
+        android:id="@+id/gv_content"
+        android:layout_width="1230dp"
+        android:layout_height="560dp"
+        android:layout_below="@id/tv_page_goods"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:background="#4D2C5A97"
+        android:columnCount="7"
+        android:padding="20dp"
+        android:rowCount="2">
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒1 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp">
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒2 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒3 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒4 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒5 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒6 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒7 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒8 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒9 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒10 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒11 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒12 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒13 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="255dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_goods_14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/goods_focused_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/default_goods"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鸡尾酒14 ￥100"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/iv_white_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/gv_content"
+        android:layout_alignTop="@id/gv_content"
+        android:background="@drawable/white_border"
+        android:visibility="gone"/>
 </RelativeLayout>

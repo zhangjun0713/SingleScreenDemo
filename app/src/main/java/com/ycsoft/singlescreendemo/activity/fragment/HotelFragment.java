@@ -1,6 +1,7 @@
 package com.ycsoft.singlescreendemo.activity.fragment;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ycsoft.singlescreendemo.R;
+import com.ycsoft.singlescreendemo.activity.GoodsActivity;
 import com.ycsoft.singlescreendemo.util.DensityUtil;
 
 /**
@@ -191,7 +193,9 @@ public class HotelFragment extends Fragment implements View.OnFocusChangeListene
         if (view == mTextViewArrays[0]) {
             Toast.makeText(getActivity(), "暂未开放-->" + mTextViewArrays[0].getText().toString(), Toast.LENGTH_SHORT).show();
         } else if (view == mTextViewArrays[1]) {
-            Toast.makeText(getActivity(), "暂未开放-->" + mTextViewArrays[1].getText().toString(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), GoodsActivity.class);
+            intent.putExtra(GoodsActivity.TAG,mTextViewArrays[1].getText().toString());
+            getActivity().startActivity(intent);
         } else if (view == mTextViewArrays[2]) {
             Toast.makeText(getActivity(), "暂未开放-->" + mTextViewArrays[2].getText().toString(), Toast.LENGTH_SHORT).show();
         } else if (view == mTextViewArrays[3]) {

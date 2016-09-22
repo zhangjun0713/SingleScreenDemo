@@ -37,6 +37,9 @@
         <activity
             android:name=".activity.HotelActivity"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".activity.GoodsActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
