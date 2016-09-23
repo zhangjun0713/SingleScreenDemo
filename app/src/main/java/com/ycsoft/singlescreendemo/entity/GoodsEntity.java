@@ -19,4 +19,22 @@ public class GoodsEntity implements Serializable {
 	 * 商品数量
 	 */
 	public String goodsCount;
+
+	public GoodsEntity() {
+	}
+
+	public GoodsEntity(String goodsName, String goodsPrice, String goodsCount) {
+		this.goodsName = goodsName;
+		this.goodsPrice = goodsPrice;
+		this.goodsCount = goodsCount;
+	}
+
+	@Override
+	public String toString() {
+		return "GoodsEntity{" +
+				"goodsName='" + goodsName + '\'' +
+				", goodsPrice='" + goodsPrice + '\'' +
+				", goodsCount='" + goodsCount + '\'' +
+				'}';
+	}
 }

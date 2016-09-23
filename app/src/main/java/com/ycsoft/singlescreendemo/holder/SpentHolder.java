@@ -34,10 +34,14 @@ public class SpentHolder {
 	/**
 	 * 添加到已消费
 	 *
-	 * @param goodsEntity
-	 * @return
+	 * @param shoppingCartGoods
 	 */
-	public boolean addGoodsToSpent(GoodsEntity goodsEntity) {
-		return mSpentGoodsEntities.add(goodsEntity);
+	public void addAllGoods(List<GoodsEntity> shoppingCartGoods) {
+		for (GoodsEntity goodsEntity :
+				shoppingCartGoods) {
+			GoodsEntity entity = new GoodsEntity(goodsEntity.goodsName, goodsEntity.goodsPrice,
+					goodsEntity.goodsCount);
+			mSpentGoodsEntities.add(entity);
+		}
 	}
 }

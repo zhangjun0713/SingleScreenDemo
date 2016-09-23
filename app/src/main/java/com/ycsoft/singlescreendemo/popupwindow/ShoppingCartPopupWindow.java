@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.ycsoft.singlescreendemo.R;
 import com.ycsoft.singlescreendemo.adapter.ShoppingCartAdapter;
 import com.ycsoft.singlescreendemo.holder.ShoppingCartHolder;
+import com.ycsoft.singlescreendemo.holder.SpentHolder;
 
 /**
  * Created by Jeremy on 2016/9/23.
@@ -24,6 +25,7 @@ public class ShoppingCartPopupWindow extends PopupWindow implements PopupWindow.
 	private ListView lvShoppingCart;
 	private ShoppingCartAdapter mShoppingCartAdapter;
 	private ShoppingCartHolder mShoppingCartHolder;
+	private SpentHolder mSpentHolder;
 
 	public ShoppingCartPopupWindow(Context mContext) {
 		this(null, 390, 560, mContext);
@@ -36,6 +38,7 @@ public class ShoppingCartPopupWindow extends PopupWindow implements PopupWindow.
 				: contentView, width, height);
 		this.mContext = mContext;
 		mShoppingCartHolder = ShoppingCartHolder.getInstance();
+		mSpentHolder = SpentHolder.getInstance();
 	}
 
 	@Override
@@ -75,6 +78,7 @@ public class ShoppingCartPopupWindow extends PopupWindow implements PopupWindow.
 				break;
 			case R.id.btn_confirm_order_list:
 				Toast.makeText(mContext, "提交订单成功！", Toast.LENGTH_SHORT).show();
+				mSpentHolder.addAllGoods(mShoppingCartHolder.getShoppingCartGoods());
 				mShoppingCartHolder.clearCart();
 				dismiss();
 				break;

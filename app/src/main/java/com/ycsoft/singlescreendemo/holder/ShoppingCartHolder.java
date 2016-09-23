@@ -53,6 +53,10 @@ public class ShoppingCartHolder {
 	 * 清除购物车中的物品
 	 */
 	public void clearCart() {
+		for (GoodsEntity goodsEntity :
+				mGoodsEntities) {
+			goodsEntity.goodsCount = "0";
+		}
 		mGoodsEntities.clear();
 	}
 }

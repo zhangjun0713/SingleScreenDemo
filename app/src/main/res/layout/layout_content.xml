@@ -7,14 +7,17 @@
         android:id="@+id/rl_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="40dp">
 
         <TextView
             android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:gravity="center_vertical"
@@ -26,9 +29,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_toLeftOf="@id/tv_time"
+            android:layout_toStartOf="@id/tv_time"
             android:drawableLeft="@drawable/icon_weather"
+            android:drawableStart="@drawable/icon_weather"
             android:gravity="center_vertical"
             android:text=" | 成都 |"
             android:textColor="@android:color/white"
@@ -51,5 +57,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/rl_top"></FrameLayout>
+        android:layout_below="@id/rl_top"/>
 </RelativeLayout>

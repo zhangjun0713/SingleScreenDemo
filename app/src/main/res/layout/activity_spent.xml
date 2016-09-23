@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bg"
+                android:orientation="vertical"
+                android:paddingEnd="25dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingStart="25dp">
+
+    <include layout="@layout/layout_content"/>
+
+    <TextView
+        android:id="@+id/tv_page_spent"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:drawableLeft="@drawable/icon_path_left_arrow"
+        android:drawableStart="@drawable/icon_path_left_arrow"
+        android:gravity="center_vertical"
+        android:text=" 消费记录"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_spent_title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/tv_page_spent"
+        android:background="@drawable/spent_title_bg"
+        android:orientation="horizontal"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="商品名称"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="单价"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="数量"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="小计"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_goods_spent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_total_spent"
+        android:layout_below="@id/ll_spent_title"
+        android:layout_marginTop="12dp"
+        android:descendantFocusability="afterDescendants"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="6dp">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_total_spent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@id/lv_goods_spent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/lv_goods_spent"
+        android:layout_marginBottom="56dp"
+        android:gravity="center|right"
+        android:minWidth="80dp"
+        android:text="总计："
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+</RelativeLayout>

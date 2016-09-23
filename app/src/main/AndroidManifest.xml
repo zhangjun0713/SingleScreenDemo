@@ -40,6 +40,9 @@
         <activity
             android:name=".activity.GoodsActivity"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".activity.SpentActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
