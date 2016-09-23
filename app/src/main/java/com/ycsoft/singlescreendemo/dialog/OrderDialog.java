@@ -2,6 +2,7 @@ package com.ycsoft.singlescreendemo.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -9,7 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ycsoft.singlescreendemo.GoodsEntity;
 import com.ycsoft.singlescreendemo.R;
+import com.ycsoft.singlescreendemo.holder.ShoppingCartHolder;
 
 /**
  * Created by Jeremy on 2016/9/22.
@@ -22,17 +25,19 @@ public class OrderDialog extends Dialog implements View.OnClickListener {
 	private StringBuilder mInputStringBuilder = new StringBuilder();
 	private ImageView ivAdd, ivReduce;
 	private ImageButton ibtnDelete;
-	private TextView tvGoodsName,tvCount;
+	private TextView tvGoodsName, tvCount;
 	private Button btnPositive, btnNegative;
 	private int count = 1;
-	private static String mGoodsName;
+	private static GoodsEntity mGoodsEntity;
+	private ShoppingCartHolder mShoppingCartHolder;
 
 	public OrderDialog(Context context) {
-		super(context, R.style.Dialog);
+		this(context, R.style.Dialog);
 	}
 
 	private OrderDialog(Context context, int theme) {
 		super(context, theme);
+		mShoppingCartHolder = ShoppingCartHolder.getInstance();
 	}
 
 	/**
@@ -41,8 +46,8 @@ public class OrderDialog extends Dialog implements View.OnClickListener {
 	 * @param context
 	 * @return
 	 */
-	public static OrderDialog getInstance(Context context,String goodsName) {
-		mGoodsName = goodsName;
+	public static OrderDialog getInstance(Context context, GoodsEntity goodsEntity) {
+		mGoodsEntity = goodsEntity;
 		mOrderDialog = new OrderDialog(context);
 		return mOrderDialog;
 	}
@@ -57,7 +62,7 @@ public class OrderDialog extends Dialog implements View.OnClickListener {
 
 	private void init() {
 		tvGoodsName = (TextView) findViewById(R.id.tv_goods_name);
-		tvGoodsName.setText(mGoodsName);
+		tvGoodsName.setText(mGoodsEntity.goodsName);
 		ivAdd = (ImageView) findViewById(R.id.iv_count_add);
 		ivAdd.setOnClickListener(this);
 		ivReduce = (ImageView) findViewById(R.id.iv_count_reduce);
@@ -107,7 +112,21 @@ public class OrderDialog extends Dialog implements View.OnClickListener {
 				break;
 
 			case R.id.btn_positive:
-				//TODO 加入购物车,弹提示
+				if (TextUtils.isEmpty(tvCount.getText().toString())) {
+					Toast.makeText(getContext(),"数量不能为空！",Toast.LENGTH_SHORT).show();
+					return;
+				} else if(!TextUtils.isEmpty(tvCount.getText().toString())
+						&& Integer.valueOf(tvCount.getText().toString()) == 0){
+					Toast.makeText(getContext(),"数量不能为0！",Toast.LENGTH_SHORT).show();
+					return;
+				}
+				if (mShoppingCartHolder.isExist(mGoodsEntity)) {
+					mGoodsEntity.goodsCount = String.valueOf(Integer.valueOf(tvCount.getText().toString())
+							+ Integer.valueOf(mGoodsEntity.goodsCount));
+				} else {
+					mGoodsEntity.goodsCount = tvCount.getText().toString();
+					mShoppingCartHolder.addGoodsToShoppingCart(mGoodsEntity);
+				}
 				dismiss();
 				break;
 
@@ -132,7 +151,7 @@ public class OrderDialog extends Dialog implements View.OnClickListener {
 			case R.id.ibtn_delete:
 				if (mInputStringBuilder.length() > 0) {
 					mInputStringBuilder.delete(mInputStringBuilder.length() - 1, mInputStringBuilder.length());
-					count = Integer.valueOf(mInputStringBuilder.length()==0?"0":mInputStringBuilder.toString());
+					count = Integer.valueOf(mInputStringBuilder.length() == 0 ? "0" : mInputStringBuilder.toString());
 				}
 				tvCount.setText(mInputStringBuilder.toString());
 				break;

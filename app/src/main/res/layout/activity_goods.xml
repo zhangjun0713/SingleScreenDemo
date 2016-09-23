@@ -20,6 +20,7 @@
         android:textSize="20sp"/>
 
     <TextView
+        android:id="@+id/tv_shopping_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/gv_content"
@@ -59,7 +60,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒1 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp">
             </TextView>
@@ -80,7 +80,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒2 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -100,7 +99,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒3 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -120,7 +118,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒4 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -140,7 +137,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒5 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -160,7 +156,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒6 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -180,7 +175,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒7 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -201,7 +195,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒8 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -222,7 +215,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒9 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -243,7 +235,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒10 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -264,7 +255,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒11 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -285,7 +275,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒12 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -306,7 +295,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒13 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>
@@ -327,7 +315,6 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="鸡尾酒14 ￥100"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </RelativeLayout>

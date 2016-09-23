@@ -1,11 +1,14 @@
 package com.ycsoft.singlescreendemo.activity;
 
 import android.support.annotation.NonNull;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.ycsoft.singlescreendemo.GoodsEntity;
 import com.ycsoft.singlescreendemo.R;
 import com.ycsoft.singlescreendemo.dialog.OrderDialog;
+import com.ycsoft.singlescreendemo.popupwindow.ShoppingCartPopupWindow;
 
 /**
  * Created by Jeremy on 2016/9/22.
@@ -16,7 +19,8 @@ public class GoodsActivity extends BaseActivity implements View.OnClickListener 
 	private String mPageName;
 	private TextView tvPageName;
 	private TextView[] mGoodsViewArray = new TextView[14];
-	private String mGoodsName;
+	private TextView tvShoppingCart;
+	private ShoppingCartPopupWindow popupWindow;
 
 	@Override
 	public void initActivity() {
@@ -28,6 +32,8 @@ public class GoodsActivity extends BaseActivity implements View.OnClickListener 
 	public void initViews() {
 		tvPageName = (TextView) findViewById(R.id.tv_page_goods);
 		tvPageName.setText(mPageName);
+		tvShoppingCart = (TextView) findViewById(R.id.tv_shopping_cart);
+		tvShoppingCart.setOnClickListener(this);
 		mGoodsViewArray[0] = (TextView) findViewById(R.id.tv_goods_1);
 		mGoodsViewArray[1] = (TextView) findViewById(R.id.tv_goods_2);
 		mGoodsViewArray[2] = (TextView) findViewById(R.id.tv_goods_3);
@@ -44,26 +50,53 @@ public class GoodsActivity extends BaseActivity implements View.OnClickListener 
 		mGoodsViewArray[13] = (TextView) findViewById(R.id.tv_goods_14);
 		for (TextView textView :
 				mGoodsViewArray) {
-			textView.setOnClickListener(this);
+			textView.setOnClickListener(mGoodsClickListener);
 		}
 
 	}
 
+	/**
+	 * 商品点击监听器
+	 */
+	private View.OnClickListener mGoodsClickListener = new View.OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			GoodsEntity goodsEntity = (GoodsEntity) v.getTag();
+			showOrderDialog(goodsEntity);
+		}
+	};
+
 	@Override
 	public void initDatas() {
-
+		for (int i = 0; i < mGoodsViewArray.length; i++) {
+			GoodsEntity entity = new GoodsEntity();
+			entity.goodsName = "鸡尾酒" + (i + 1);
+			entity.goodsPrice = 100 + "";
+			mGoodsViewArray[i].setText(entity.goodsName + " ￥" + entity.goodsPrice);
+			mGoodsViewArray[i].setTag(entity);
+		}
 	}
 
 	@Override
 	public void onClick(View v) {
-		String string = ((TextView) v).getText().toString();
-		mGoodsName = string.substring(0, string.indexOf(" "));
-		showOrderDialog(mGoodsName);
+		switch (v.getId()) {
+			case R.id.tv_shopping_cart:
+				if (popupWindow != null && popupWindow.isShowing()) {
+					popupWindow.dismiss();
+				} else {
+					popupWindow = new ShoppingCartPopupWindow(this);
+					popupWindow.setOutsideTouchable(false);
+					popupWindow.setFocusable(true);
+					popupWindow.setAnimationStyle(R.style.PopupWindowAnimation);
+					popupWindow.showAtLocation((View) v.getParent(), Gravity.NO_GRAVITY, 865, 160);
+				}
+				break;
+		}
 	}
 
 	@NonNull
-	private OrderDialog showOrderDialog(String goodsName) {
-		OrderDialog dialog = OrderDialog.getInstance(this, goodsName);
+	private OrderDialog showOrderDialog(GoodsEntity goodsEntity) {
+		OrderDialog dialog = OrderDialog.getInstance(this, goodsEntity);
 		dialog.show();
 		dialog.setContentView();
 		return dialog;
