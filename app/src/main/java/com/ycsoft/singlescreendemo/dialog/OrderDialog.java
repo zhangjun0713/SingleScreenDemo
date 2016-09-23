@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ycsoft.singlescreendemo.GoodsEntity;
+import com.ycsoft.singlescreendemo.entity.GoodsEntity;
 import com.ycsoft.singlescreendemo.R;
 import com.ycsoft.singlescreendemo.holder.ShoppingCartHolder;
 

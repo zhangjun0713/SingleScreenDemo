@@ -1,6 +1,6 @@
 package com.ycsoft.singlescreendemo.holder;
 
-import com.ycsoft.singlescreendemo.GoodsEntity;
+import com.ycsoft.singlescreendemo.entity.GoodsEntity;
 
 import java.util.ArrayList;
 import java.util.List;

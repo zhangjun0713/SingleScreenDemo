@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.ycsoft.singlescreendemo.GoodsEntity;
+import com.ycsoft.singlescreendemo.entity.GoodsEntity;
 import com.ycsoft.singlescreendemo.R;
 import com.ycsoft.singlescreendemo.holder.ShoppingCartHolder;
 

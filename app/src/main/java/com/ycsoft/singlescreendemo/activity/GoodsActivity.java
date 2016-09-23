@@ -5,7 +5,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ycsoft.singlescreendemo.GoodsEntity;
+import com.ycsoft.singlescreendemo.entity.GoodsEntity;
 import com.ycsoft.singlescreendemo.R;
 import com.ycsoft.singlescreendemo.dialog.OrderDialog;
 import com.ycsoft.singlescreendemo.popupwindow.ShoppingCartPopupWindow;

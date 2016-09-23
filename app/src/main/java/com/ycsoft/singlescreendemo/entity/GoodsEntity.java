@@ -1,4 +1,4 @@
-package com.ycsoft.singlescreendemo;
+package com.ycsoft.singlescreendemo.entity;
 
 import java.io.Serializable;
 
