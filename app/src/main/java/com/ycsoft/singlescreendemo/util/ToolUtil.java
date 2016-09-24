@@ -8,10 +8,16 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.text.TextUtils;
 
+import com.ycsoft.singlescreendemo.entity.MvEntity;
+
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Jeremy on 2016/8/18.
@@ -123,5 +129,39 @@ public class ToolUtil {
 		} else {
 			return result.lastIndexOf("Success") > 0;
 		}
+	}
+
+	/**
+	 * 扫描所有歌曲歌曲文件(.mpg与.yc,.mkv,mp4，包含子文件夹中的)
+	 */
+	public static List<MvEntity> scanYCsoftVideo(String path) {
+		final List<MvEntity> dataEntities = new ArrayList<>();
+		File root = new File(path);
+		File[] roots = root.listFiles();
+		if (roots != null) {
+			for (File file : roots) {
+				if (file.isDirectory()) {
+					dataEntities.addAll(scanYCsoftVideo(file.getAbsolutePath()));
+				} else {
+					String filename = file.getName();
+					if (filename.toLowerCase(Locale.CHINESE).endsWith(".mpg")
+							|| filename.toLowerCase(Locale.CHINESE).endsWith(".yc")
+							|| filename.toLowerCase(Locale.CHINESE).endsWith(".mkv")
+							|| filename.toLowerCase(Locale.CHINESE).endsWith(".mp4")) {
+						MvEntity mvEntity = new MvEntity();
+						String clearName = filename.substring(0,
+								filename.lastIndexOf('.'));
+						mvEntity.mvName = clearName;
+						mvEntity.path = file.getAbsolutePath();
+						//只取100首歌曲
+						if (dataEntities.size() < 100)
+							dataEntities.add(mvEntity);
+						else
+							break;
+					}
+				}
+			}
+		}
+		return dataEntities;
 	}
 }

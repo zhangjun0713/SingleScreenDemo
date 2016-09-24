@@ -10,9 +10,9 @@
         android:id="@+id/tv_page_goods"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:drawableLeft="@drawable/icon_path_left_arrow"
         android:layout_alignLeft="@+id/gv_content"
         android:layout_marginTop="110dp"
+        android:drawableLeft="@drawable/icon_path_left_arrow"
         android:gravity="center"
         android:paddingBottom="10dp"
         android:text=" 酒水点单"
@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/gv_content"
         android:layout_alignTop="@id/tv_page_goods"
-        android:gravity="center"
-        android:focusable="true"
         android:drawableLeft="@drawable/shopping_cart_selector"
+        android:focusable="true"
+        android:gravity="center"
         android:paddingBottom="10dp"
         android:text="购物车"
         android:textColor="@color/text_color_pressed_seletor"
@@ -320,13 +320,4 @@
         </RelativeLayout>
 
     </GridLayout>
-
-    <ImageView
-        android:id="@+id/iv_white_border"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/gv_content"
-        android:layout_alignTop="@id/gv_content"
-        android:background="@drawable/white_border"
-        android:visibility="gone"/>
 </RelativeLayout>

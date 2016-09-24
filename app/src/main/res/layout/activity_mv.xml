@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bg">
+
+    <include layout="@layout/layout_content"/>
+
+    <TextView
+        android:id="@+id/tv_page_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/gv_mv"
+        android:layout_alignStart="@+id/gv_mv"
+        android:layout_marginTop="110dp"
+        android:drawableLeft="@drawable/icon_path_left_arrow"
+        android:drawableStart="@drawable/icon_path_left_arrow"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text=" 酒水点单"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <GridView
+        android:id="@+id/gv_mv"
+        android:layout_width="1230dp"
+        android:layout_height="560dp"
+        android:layout_below="@id/tv_page_goods"
+        android:layout_centerHorizontal="true"
+        android:background="#4D2C5A97"
+        android:columnWidth="290dp"
+        android:descendantFocusability="afterDescendants"
+        android:drawSelectorOnTop="true"
+        android:horizontalSpacing="10dp"
+        android:listSelector="@drawable/mv_focused_bg"
+        android:numColumns="4"
+        android:padding="20dp"
+        android:verticalSpacing="10dp">
+
+    </GridView>
+
+</RelativeLayout>

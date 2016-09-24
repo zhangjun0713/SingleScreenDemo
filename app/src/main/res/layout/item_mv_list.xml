@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="255dp"
+        android:background="@drawable/bg_mv"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_mv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/icon_play"
+            android:gravity="bottom|left"
+            android:paddingBottom="20dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="82dp"
+            android:singleLine="true"
+            android:text="功夫熊猫"
+            android:textColor="@android:color/white"
+            android:textSize="20sp">
+        </TextView>
+    </RelativeLayout>
+</RelativeLayout>

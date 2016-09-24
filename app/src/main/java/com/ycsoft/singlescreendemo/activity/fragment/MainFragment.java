@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.ycsoft.singlescreendemo.R;
 import com.ycsoft.singlescreendemo.activity.HotelActivity;
+import com.ycsoft.singlescreendemo.activity.MvActivity;
 import com.ycsoft.singlescreendemo.common.Constants;
 import com.ycsoft.singlescreendemo.util.DensityUtil;
 import com.ycsoft.singlescreendemo.util.ToolUtil;
@@ -234,7 +235,8 @@ public class MainFragment extends Fragment implements View.OnFocusChangeListener
 		} else if (view == mTextViewArrays[5]) {
 			Toast.makeText(getActivity(), "暂未开放-->" + mTextViewArrays[5].getText().toString(), Toast.LENGTH_SHORT).show();
 		} else if (view == mTextViewArrays[6]) {
-			Toast.makeText(getActivity(), "暂未开放-->" + mTextViewArrays[6].getText().toString(), Toast.LENGTH_SHORT).show();
+			Intent intent = new Intent(getActivity(), MvActivity.class);
+			getActivity().startActivity(intent);
 		} else if (view == mTextViewArrays[7]) {
 			Toast.makeText(getActivity(), "暂未开放-->" + mTextViewArrays[7].getText().toString(), Toast.LENGTH_SHORT).show();
 		}
