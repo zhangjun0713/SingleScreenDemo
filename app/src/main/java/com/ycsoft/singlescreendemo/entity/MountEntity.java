@@ -25,7 +25,7 @@ public class MountEntity implements Serializable {
 
 		private String type;
 
-		private MountType(String type) {
+		MountType(String type) {
 			this.type = type;
 		}
 
