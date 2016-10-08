@@ -236,6 +236,7 @@ public class MainFragment extends Fragment implements View.OnFocusChangeListener
 			Toast.makeText(getActivity(), "暂未开放-->" + mTextViewArrays[5].getText().toString(), Toast.LENGTH_SHORT).show();
 		} else if (view == mTextViewArrays[6]) {
 			Intent intent = new Intent(getActivity(), MvActivity.class);
+			intent.putExtra(MvActivity.TAG,mTextViewArrays[6].getText().toString());
 			getActivity().startActivity(intent);
 		} else if (view == mTextViewArrays[7]) {
 			Toast.makeText(getActivity(), "暂未开放-->" + mTextViewArrays[7].getText().toString(), Toast.LENGTH_SHORT).show();

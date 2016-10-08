@@ -7,7 +7,7 @@
     <include layout="@layout/layout_content"/>
 
     <TextView
-        android:id="@+id/tv_page_goods"
+        android:id="@+id/tv_page_mv"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignLeft="@+id/gv_mv"
@@ -25,7 +25,7 @@
         android:id="@+id/gv_mv"
         android:layout_width="1230dp"
         android:layout_height="560dp"
-        android:layout_below="@id/tv_page_goods"
+        android:layout_below="@id/tv_page_mv"
         android:layout_centerHorizontal="true"
         android:background="#4D2C5A97"
         android:columnWidth="290dp"

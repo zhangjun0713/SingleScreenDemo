@@ -1,15 +1,13 @@
 package com.ycsoft.singlescreendemo.activity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.ycsoft.singlescreendemo.R;
 import com.ycsoft.singlescreendemo.adapter.MvAdapter;
@@ -29,10 +27,13 @@ public class MvActivity extends BaseActivity implements AdapterView.OnItemClickL
 
 	private static final int UPDATE_MV_LIST = 1;
 	private static final int INIT_FINISHED = 2;
+	public static final String TAG = "MvActivity";
 	private GridView gvMv;
 	private MvAdapter mMvAdapter;
 	private List<MvEntity> mMvEntities = new ArrayList<>();
 	private List<MountEntity> mountEntities = new ArrayList<>();
+	private TextView tvPageName;
+	private String mPageName;
 	private DeviceInfoHolder deviceInfoHolder;
 	private ScanTask mScanTask;
 	private Handler mHandler = new Handler() {
@@ -61,10 +62,13 @@ public class MvActivity extends BaseActivity implements AdapterView.OnItemClickL
 	public void initActivity() {
 		setContentView(R.layout.activity_mv);
 		deviceInfoHolder = new DeviceInfoHolder();
+		mPageName = getIntent().getStringExtra(TAG);
 	}
 
 	@Override
 	public void initViews() {
+		tvPageName = (TextView) findViewById(R.id.tv_page_mv);
+		tvPageName.setText(mPageName);
 		gvMv = (GridView) findViewById(R.id.gv_mv);
 		mMvAdapter = new MvAdapter(this, mMvEntities);
 		gvMv.setAdapter(mMvAdapter);
