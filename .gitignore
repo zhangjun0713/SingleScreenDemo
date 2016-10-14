@@ -10,4 +10,6 @@
 /build.gradle
 /gradle
 /app/build
+/app/src/androidTest
+/app/src/test
 libs/
